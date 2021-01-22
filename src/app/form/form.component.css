@@ -69,7 +69,7 @@ input::placeholder {
 }
 .container-info {
   /* position: relative; */
-  background-image: url("../../assets/img/Background.png");
+  background-image: url("https://yuliialukianiuk.github.io/meetup-angular/assets/img/Background.png");
   width: 100%;
   background-color: var(--info-back);
   background-position: bottom 26px left -15px;

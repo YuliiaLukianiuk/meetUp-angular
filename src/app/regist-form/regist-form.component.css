@@ -108,7 +108,7 @@ input[type="checkbox"] {
   display: none;
 }
 input:checked + label:before {
-  content: url('../../assets/img/Vector.png');
+  content: url('https://yuliialukianiuk.github.io/meetup-angular/assets/img/Vector.png');
 }
 .back {
   position: relative;
