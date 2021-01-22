@@ -1,0 +1,16 @@
+app-conteiner-form,
+app-regist-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 520px;
+  padding: 24px 128px 238px 172px;
+}
+
+.test-page {
+  display: flex;
+  height: 768px;
+  width: 1360px;
+  margin: auto;
+  overflow-x: hidden;
+}

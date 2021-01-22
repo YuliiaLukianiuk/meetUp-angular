@@ -1,0 +1,204 @@
+<div 
+  [className]="modal ? 'overlay-modal overlay' : 'overlay-modal'"
+  (click)="closeModal()"
+></div>
+
+<form [formGroup]="formReg" (ngSubmit) = onSubmit()>
+  <div class="wrap-registr">
+    <div class="first-name">
+      <span class="label">Company</span>
+      <input
+        class="RegistInput"
+        type="text"
+        placeholder="Litzy Bauch"
+        formControlName="company"
+      />
+      <span [className]="formReg.controls.company.invalid && formReg.controls.company.dirty ?  'error-name show' : 'error-name' ">Number must be more than 3</span>
+      <img
+        [className]="formReg.controls.company.valid && formReg.controls.company.dirty ?  'sucessCmpn sucess show' : 'sucessCmpn sucess' "
+        src="../../assets/img/success.png"
+        alt="check"
+      />
+    </div>
+
+    <div class="second-name">
+      <span class="label">Phone number</span>
+      <input
+        class="registTel"
+        [imask]="{mask:'{+38} (000) 000-00-00'}"
+        [unmask]="true"
+        type="tel"
+        placeholder="+380"
+        formControlName="phone"
+        onkeyup="this.value = this.value.replace(/[^0-9 ]+$/g,'');"
+        maxlength="19"
+      />
+      <span [className]="formReg.controls.phone.invalid && formReg.controls.phone.dirty ?  'error-tel show' : 'error-tel' ">Phone must contain 13 numbers</span>
+      <img
+        [className]="formReg.controls.phone.valid && formReg.controls.phone.dirty ?  'sucesstel sucess show' : 'sucesstel sucess' "
+        src="../../assets/img/success.png"
+        alt="check"
+      />
+    </div>
+
+    <div class="password-name">
+      <span class="label">Password</span>
+      <input
+        class="registPsw"
+        type="password"
+        formControlName="password"
+      />
+      <span [className]="formReg.controls.password.invalid && formReg.controls.password.dirty ?  'error-psw show' : 'error-psw' ">Phone must contain 13 numbers</span>
+      <img
+        [className]="formReg.controls.password.valid && formReg.controls.password.dirty ?  'sucesspsw sucess show' : 'sucesspsw sucess' "
+        src="../../assets/img/success.png"
+        alt="check"
+      />
+    </div>
+    <div>
+      <input 
+      class="checky" 
+      id="privacy-text" 
+      type="checkbox"
+      formControlName="checkbox"
+      />
+      <label for="privacy-text">
+        Accept <span class="privacy" href="#" (click)="showModal()">Privacy Statement</span> and
+        <span class="privacy" href="#" (click)="showModal()">Terms & Conditions</span></label
+      >
+    </div>
+  </div>
+ <div class="back" (click) = back()>Back</div>
+  <button 
+  [className]="formReg.valid? 'btn-form-registr' : 'btn-form-registr disabled'" ng-disabled="!formReg.valid">
+    Create free account
+  </button>
+</form>
+<div 
+[className]="modal ? 'modal-show modal' : 'modal'"
+>
+  <h1>Privacy Statement</h1>
+
+  <div class="first-part">
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+      eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate
+      sapien nec sagittis aliquam malesuada bibendum. Vulputate ut pharetra
+      sit amet aliquam id diam maecenas ultricies. Aliquet nibh praesent
+      tristique magna sit amet. Convallis aenean et tortor at risus viverra.
+      Tristique sollicitudin nibh sit amet commodo. Integer enim neque
+      volutpat ac tincidunt vitae semper. Rhoncus urna neque viverra justo
+      nec ultrices.
+    </p>
+    <p>
+      Viverra aliquet eget sit amet tellus cras adipiscing enim eu.
+      Elementum pulvinar etiam non quam lacus suspendisse faucibus. Nec
+      sagittis aliquam malesuada bibendum arcu vitae elementum. Tortor
+      posuere ac ut consequat semper viverra. At quis risus sed vulputate
+      odio ut enim blandit.
+    </p>
+    <p>
+      Ornare massa eget egestas purus viverra accumsan. Mattis rhoncus urna
+      neque viverra justo nec. Adipiscing diam donec adipiscing tristique
+      risus nec feugiat. Amet massa vitae tortor condimentum. At varius vel
+      pharetra vel. Porttitor eget dolor morbi non arcu risus quis varius.
+      Id donec ultrices tincidunt arcu. Aliquet enim tortor at auctor urna
+      nunc id cursus. Rhoncus dolor purus non enim praesent elementum
+      facilisis leo.
+    </p>
+  </div>
+
+  <div class="second-part">
+    <h1>Amet massa vitae tortor</h1>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+      eiusmod tempor incididunt ut labore et dolore magna aliqua. Vulputate
+      sapien nec sagittis aliquam malesuada bibendum. Vulputate ut pharetra
+      sit amet aliquam id diam maecenas ultricies. Aliquet nibh praesent
+      tristique magna sit amet. Convallis aenean et tortor at risus viverra.
+      Tristique sollicitudin nibh sit amet commodo. Integer enim neque
+      volutpat ac tincidunt vitae semper. Rhoncus urna neque viverra justo
+      nec ultrices.
+    </p>
+    <p>
+      Viverra aliquet eget sit amet tellus cras adipiscing enim eu.
+      Elementum pulvinar etiam non quam lacus suspendisse faucibus. Nec
+      sagittis aliquam malesuada bibendum arcu vitae elementum. Tortor
+      posuere ac ut consequat semper viverra. At quis risus sed vulputate
+      odio ut enim blandit.
+    </p>
+    <p>
+      Viverra aliquet eget sit amet tellus cras adipiscing enim eu.
+      Elementum pulvinar etiam non quam lacus suspendisse faucibus. Nec
+      sagittis aliquam malesuada bibendum arcu vitae elementum. Tortor
+      posuere ac ut consequat semper viverra. At quis risus sed vulputate
+      odio ut enim blandit.
+    </p>
+    <p>
+      Viverra aliquet eget sit amet tellus cras adipiscing enim eu.
+      Elementum pulvinar etiam non quam lacus suspendisse faucibus. Nec
+      sagittis aliquam malesuada bibendum arcu vitae elementum. Tortor
+      posuere ac ut consequat semper viverra. At quis risus sed vulputate
+      odio ut enim blandit.
+    </p>
+    <p>
+      Viverra aliquet eget sit amet tellus cras adipiscing enim eu.
+      Elementum pulvinar etiam non quam lacus suspendisse faucibus. Nec
+      sagittis aliquam malesuada bibendum arcu vitae elementum. Tortor
+      posuere ac ut consequat semper viverra. At quis risus sed vulputate
+      odio ut enim blandit.
+    </p>
+    <p>
+      Viverra aliquet eget sit amet tellus cras adipiscing enim eu.
+      Elementum pulvinar etiam non quam lacus suspendisse faucibus. Nec
+      sagittis aliquam malesuada bibendum arcu vitae elementum. Tortor
+      posuere ac ut consequat semper viverra. At quis risus sed vulputate
+      odio ut enim blandit.
+    </p>
+    <p>
+      Viverra aliquet eget sit amet tellus cras adipiscing enim eu.
+      Elementum pulvinar etiam non quam lacus suspendisse faucibus. Nec
+      sagittis aliquam malesuada bibendum arcu vitae elementum. Tortor
+      posuere ac ut consequat semper viverra. At quis risus sed vulputate
+      odio ut enim blandit.
+    </p>
+    <p>
+      Viverra aliquet eget sit amet tellus cras adipiscing enim eu.
+      Elementum pulvinar etiam non quam lacus suspendisse faucibus. Nec
+      sagittis aliquam malesuada bibendum arcu vitae elementum. Tortor
+      posuere ac ut consequat semper viverra. At quis risus sed vulputate
+      odio ut enim blandit.
+    </p>
+    <p>
+      Viverra aliquet eget sit amet tellus cras adipiscing enim eu.
+      Elementum pulvinar etiam non quam lacus suspendisse faucibus. Nec
+      sagittis aliquam malesuada bibendum arcu vitae elementum. Tortor
+      posuere ac ut consequat semper viverra. At quis risus sed vulputate
+      odio ut enim blandit.
+    </p>
+    <p>
+      Viverra aliquet eget sit amet tellus cras adipiscing enim eu.
+      Elementum pulvinar etiam non quam lacus suspendisse faucibus. Nec
+      sagittis aliquam malesuada bibendum arcu vitae elementum. Tortor
+      posuere ac ut consequat semper viverra. At quis risus sed vulputate
+      odio ut enim blandit.
+    </p>
+    <p>
+      Viverra aliquet eget sit amet tellus cras adipiscing enim eu.
+      Elementum pulvinar etiam non quam lacus suspendisse faucibus. Nec
+      sagittis aliquam malesuada bibendum arcu vitae elementum. Tortor
+      posuere ac ut consequat semper viverra. At quis risus sed vulputate
+      odio ut enim blandit.
+    </p>
+    <p>
+      Viverra aliquet eget sit amet tellus cras adipiscing enim eu.
+      Elementum pulvinar etiam non quam lacus suspendisse faucibus. Nec
+      sagittis aliquam malesuada bibendum arcu vitae elementum. Tortor
+      posuere ac ut consequat semper viverra. At quis risus sed vulputate
+      odio ut enim blandit.
+    </p>
+  </div>
+
+  <img class="close" src="../../assets/img/close.png" alt="close" (click)="closeModal()" />
+</div>
+

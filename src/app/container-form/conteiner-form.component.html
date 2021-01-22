@@ -1,0 +1,20 @@
+  <img class="logo"
+    src="../../assets/img/picturemessage_4seanznx 1.png" alt="logo"/>
+  <div class="container-text">
+    <h1>Try Met Jip for free</h1>
+    <div class="line"></div>
+  </div>
+  <p class="text">
+    Try Met Jip for free for 14 days. Do you already have a login than
+    you can. <a href="">Login here</a>
+  </p>
+
+  <!-- <app-form></app-form> -->
+    <ng-template [ngIf] = "formFirst" [ngIfElse] = "formSecond">
+      <app-form (change)=set($event)></app-form>
+    </ng-template>
+    <ng-template #formSecond>
+      <app-regist-form (Back) = "set($event)"></app-regist-form> 
+    </ng-template> 
+  
+

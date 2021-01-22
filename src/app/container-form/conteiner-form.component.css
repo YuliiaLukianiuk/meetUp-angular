@@ -1,0 +1,66 @@
+.test {
+  width: 100%;
+}
+.form-wrap {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 48px;
+}
+.container-form {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 520px;
+  padding: 24px 128px 238px 172px;
+}
+img.logo,
+.logo-TH {
+  position: relative;
+  left: 158px;
+  height: 68px;
+  width: 136px;
+  margin-bottom: 80px;
+}
+.line {
+  position: absolute;
+  width: 113px;
+  height: 12px;
+  left: 52px;
+  right: 111px;
+  top: 22px;
+  bottom: 4px;
+  background-color: var(--text-color);
+}
+.line-TH {
+  position: absolute;
+  width: 134px;
+  height: 12px;
+  left: 674px;
+  top: 295px;
+  background-color: var(--text-color);
+}
+.container-text {
+  position: relative;
+  width: 276px;
+}
+.container-text h1 {
+  position: relative;
+  font-weight: 700;
+  height: 38px;
+  font-size: 32px;
+  margin: 0;
+  z-index: 1;
+}
+.text,
+.container-thanks p {
+  width: 452px;
+  height: 48px;
+  font-weight: 400;
+  line-height: 24px;
+  font-size: 16px;
+}
+.text a {
+  font-weight: 400;
+  font-size: 16px;
+  color: var(--link);
+}

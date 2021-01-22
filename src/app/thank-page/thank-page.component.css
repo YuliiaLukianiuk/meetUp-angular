@@ -1,0 +1,70 @@
+.container-thanks {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+.container-thanks p {
+  width: 100%;
+  font-weight: 400;
+  line-height: 24px;
+  font-size: 16px;
+  margin-top: 20px auto 20px auto;
+  text-align: center;
+
+}
+.container-thanks h1 {
+  font-size: 24px;
+  line-height: 28.8px;
+  font-weight: 700;
+  text-align: center;
+  margin-top: 50px;
+  z-index: 1;
+}
+.logo-TH{
+  width: 136px;
+  display: block;
+  margin: 80px auto 0 auto;
+}
+.logo-TH img{
+  width: 100%;
+}
+.check-TH {
+  display: block;
+  width: 72px;
+  margin: 80px auto 0 auto;
+}
+.check-TH img{
+  width: 100%;
+}
+.btn-thank1 {
+  width: 120px;
+  margin: 20px;
+}
+.btn-thank2 {
+  width: 120px;
+}
+.btn-form,
+.btn-form-registr,
+.btn-thank1,
+.btn-thank2 {
+  font-family: "Nunito Sans", sans-serif;
+  width: 180px;
+  height: 40px;
+  text-align: center;
+  color:var(--link);
+  background-color: #fff;
+  border-color: var(--link);
+  border-radius: 24px;
+  outline: none;
+
+  line-height: 16.8px;
+  font-size: 14px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.btn-thank1:hover,
+.btn-thank2:hover {
+  color:#fff;
+  background-color: var(--link);
+  border-color: var(--link);
+}

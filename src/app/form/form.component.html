@@ -1,0 +1,53 @@
+ <form class="test" [formGroup] = "userForm">
+  <div class="form-wrap">
+    <div class="first-name">
+      <span class="label">Firstname</span>
+      <input 
+      class="nameInput" 
+      formControlName="firstName" 
+      type="text"
+      placeholder="Litzy Bauch"
+      [class.invalid]="isFieldInvalid('firstName')"
+      />
+      <span [className]="userForm.get('firstName').invalid && userForm.get('firstName').dirty ?  'label-name show' : 'label-name' ">Number must be more than 3</span>
+      <img 
+      src="../../assets/img/success.png" 
+      alt="check"
+      [className]="userForm.get('firstName').valid && userForm.get('firstName').dirty ? 'sucess show' : 'sucess'"
+      />
+    </div>
+
+    <div class="second-name">
+      <span class="label">Firstname</span>
+      <input
+        class="nameInput2"
+        type="text"
+        placeholder="Bauch"
+        formControlName="lastName"
+      />
+      <span [className]="userForm.get('lastName').invalid && userForm.get('lastName').dirty ?  'label-name2 show' : 'label-name2' ">Number must be more than 3</span>
+      <img
+      [className]="userForm.get('lastName').valid && userForm.get('lastName').dirty ? 'sucess sucess2 show' : 'sucess sucess2'"
+
+        src="../../assets/img/success.png"
+        alt="check"
+      />
+    </div>
+</div>
+  <div class="thirst-name">
+    <input
+      class="nameInput3"
+      type="text"
+      id="email"
+      placeholder="Email"
+      formControlName="email"
+    />
+    <span [className]="userForm.get('email').invalid && userForm.get('email').dirty ?  'label-name3 show' : 'label-name3' ">Please give us some details</span>
+    <img
+    [className]="userForm.get('email').valid && userForm.get('email').dirty ? 'sucess sucess3 show' : 'sucess sucess3'"
+      src="../../assets/img/success.png"
+      alt="check"
+    />
+  </div>
+  <button type="submit" [className]="userForm.valid? 'btn-form' : 'btn-form disabled'" ng-disabled="!userForm.valid" (click)="onSubmit($event)">Next</button>
+</form> 
